@@ -7,19 +7,24 @@ import (
 )
 
 type Tree struct {
-	move1 *Tree
-	move2 *Tree
-	move3 *Tree
-	move4 *Tree
+	parent *Tree
+	uo    *Tree
+	down  *Tree
+	left  *Tree
+	right *Tree
 	board [3][3]int
 }
 
-func GenerateTree() *Tree {
+func MakeTree() *Tree {
 	fmt.Println("Generating Tree...")
 
 	t := Tree{}
 
-	t.board = board.GenerateNewBoard()
+	t.board = board.MakeBoard()
 
 	return &t
+}
+
+func PrintTree() {
+
 }
