@@ -13,11 +13,13 @@ type Tree struct {
 	Board  [3][3]int
 }
 
-func MakeBranch(b [3][3]int) Tree {
+func MakeBranch(b [3][3]int, cost int, parent *Tree) Tree {
 	fmt.Println("Generating branch...")
 
 	var t = Tree{}
 	t.Board = b
+	t.Cost = cost + 1
+	t.Parent = parent
 
 	if t.Board[0][0] == -1 {
 		t.Board = board.MakeBoard()
@@ -31,19 +33,19 @@ func MakeBranch(b [3][3]int) Tree {
 }
 
 func PrintTree(t Tree) {
-	// fmt.Println("Printing tree...")
-	// fmt.Println("Number of branches : ", len(t.Moves))
-	// fmt.Println("Parent : ", t.Parent)
+	fmt.Println("Printing tree...")
+	fmt.Println("Number of branches : ", len(t.Moves))
+	fmt.Printf("Parent : %p\n", t.Parent)
 
-	// for run := true; run; {
-	// 	fmt.Println("Cost : ", t.Cost)
-	// 	PrintBoard(t.Board)
+	for run := true; run; {
+		fmt.Println("Cost : ", t.Cost)
+		PrintBoard(t.Board)
 
-	// 	for _, branch := range t.Moves {
-	// 		PrintTree(branch)
-	// 	}
-	// 	run = false
-	// }
+		for _, branch := range t.Moves {
+			PrintTree(*branch)
+		}
+		run = false
+	}
 }
 
 func PrintBranch(t Tree) {
@@ -66,11 +68,5 @@ func PrintBoard(b [3][3]int) {
 }
 
 func CheckWinningState(t Tree) bool {
-	// Check for winning game state
-	if t.Board == board.GoalState() {
-		fmt.Println("\t\t\t\t== WINNER WINNER WINNER ==")
-		return true
-	}
-
-	return false
+	return t.Board == board.GoalState()
 }
