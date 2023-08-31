@@ -44,8 +44,8 @@ func MakeBoard() [3][3]int {
 
 func MakeTestBoard() [3][3]int {
 	return [3][3]int{
-		{1, 2, 3},
-		{0, 8, 4},
+		{0, 2, 3},
+		{1, 8, 4},
 		{7, 6, 5},
 	}
 }
