@@ -7,8 +7,6 @@ import (
 func FindEmptySpace(board [3][3]int) (int, int) {
 	fmt.Println("Finding empty space...")
 
-	fmt.Println(board)
-
 	for row, column := range board {
 		for cell := range column {
 			if board[row][cell] == 0 {
