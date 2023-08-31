@@ -12,7 +12,7 @@ func main() {
 	fmt.Println(instructions())
 
 	// Make a starting board
-	root := tree.MakeBranch([3][3]int{{-2}})
+	root := tree.MakeBranch([3][3]int{{-2}}, -1, &tree.Tree{})
 	// Current branch
 	cb := &root
 
@@ -44,13 +44,17 @@ func main() {
 		}
 
 		// Store the new board in the tree and advance current pointer
-		nb := tree.MakeBranch(b)
+		nb := tree.MakeBranch(b, cb.Cost, cb)
 		cb.Moves = append(cb.Moves, &nb)
 		cb = &nb
 
 		tree.PrintBoard(cb.Board)
 
 		if tree.CheckWinningState(*cb) {
+			fmt.Println("\t\t\t\t== WINNER WINNER WINNER ==")
+			fmt.Println("Winning solution")
+			fmt.Println("----------------")
+			tree.PrintTree(root)
 			return
 		}
 	}
