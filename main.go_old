@@ -1,0 +1,53 @@
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/goinaction/code/chapter2/sample/search"
+)
+
+type heuristic struct{}
+
+// I'll need an interface for the different heuristics so they can be called the same way and added to later on.
+
+// Matcher defines the behavior required by types that want
+// to implement a new search type.
+type Matcher interface {
+	Search(feed *Feed, searchTerm string) ([]*Result, error)
+}
+
+// See Go In Action Chapter 2 serach program for this.
+func init() {
+	var h heuristic
+	search.Register("nameOfHeuristic", h)
+}
+
+func main() {
+	fmt.Println("8 Tile State Space Searching")
+
+}
+
+// Register is called to register a matcher for use by the program.
+func Register(matcher Matcher) {
+	if _, exists := matchers[feedType]; exists {
+		log.Fatalln(feedType, "Matcher already registered")
+	}
+
+	log.Println("Register", feedType, "matcher")
+	matchers[feedType] = matcher
+}
+
+// Program design
+
+/*
+	1. Go micro service (API) which handles data / processing
+
+	2. React / Typescript for running in browser and for front-end
+
+	3. Actor design pattern for handing off processing which step to take next to concurrent process
+
+	4.
+
+
+*/
