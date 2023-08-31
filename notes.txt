@@ -1,0 +1,103 @@
+	// branch1 := tree.MakeBranch([3][3]int{{-1}})
+	// // pointer1 := &branch1
+	// // fmt.Println(&pointer1)
+	// // fmt.Println(*pointer1)
+
+	// // You have to explicitly ask Go to print the memory address for Structs etc.
+	// fmt.Printf("%p", &branch1)
+
+	// branch2 := tree.MakeBranch([3][3]int{{-1}})
+	// branch2.Parent = &branch1
+	// branch2.Cost++
+
+	// branch3 := tree.MakeBranch([3][3]int{{-1}})
+	// branch3.Parent = &branch1
+	// branch3.Cost++
+
+	// branch4 := tree.MakeBranch([3][3]int{{-1}})
+	// branch4.Parent = &branch1
+	// branch4.Cost++
+
+	// branch5 := tree.MakeBranch([3][3]int{{-1}})
+	// branch5.Parent = &branch1
+	// branch5.Cost++
+	// // pointer2 := &branch2
+	// // fmt.Println(&pointer2)
+	// // fmt.Println(*pointer2)
+
+    // branch1.Moves = append(branch1.Moves, branch2)
+	// branch1.Moves = append(branch1.Moves, branch3)
+	// branch1.Moves = append(branch1.Moves, branch4)
+	// branch1.Moves = append(branch1.Moves, branch5)
+
+	// for _, branch := range branch1.Moves {
+	// 	fmt.Println(branch.Parent)
+	// }
+
+	// fmt.Println(branch1.Moves)
+
+
+
+// // Display the menu and start playing
+// for {
+
+// 	b := board.Move(cb.Board, choice)
+// 	nb := tree.MakeBranch(b)
+// 	cb.Moves = append(cb.Moves, &nb)
+// 	cb = nb
+
+// 	fmt.Println("Current tree : ")
+// 	fmt.Println(root)
+// 	fmt.Println(cb)
+
+// 	tree.PrintBoard(cb.Board)
+// }
+
+// tree.PrintTree(root)
+
+// moves := [4]string{"up", "down", "left", "right"}
+
+// // Create the next four boards and create a new node for each
+// for _, move := range moves {
+// 	b := board.Move(root.Board, move)
+// 	n := tree.MakeTree(b)
+// 	root.Moves = append(root.Moves, &n)
+// }
+
+// tree.PrintTree(root)
+// for _, n := range root.Moves {
+// 	tree.PrintTree(*n)
+// }
+
+
+
+
+=========
+
+		// 		fmt.Println("====================================================")
+		// 		fmt.Println("====================================================")
+
+		// 		// Make a new branch with the updated board
+		// 		nb := tree.MakeBranch(b)
+		// 		nb.Cost = cb.Cost + 1
+		// 		nb.Parent = &cb
+
+		// 		fmt.Println("New branch : ")
+		// 		tree.PrintBranch(nb)
+
+		// 		// Add the new branch onto the tree
+		// 		cb.Moves = append(cb.Moves, &nb)
+
+		// 		fmt.Println("Current branch : ")
+		// 		tree.PrintBranch(cb)
+
+		// 		// Move the current branch to the new branch
+		// 		cb = nb
+
+		// 		fmt.Println("Current branch after reassign : ")
+		// 		tree.PrintBranch(cb)
+
+		// 		fmt.Println("Current Branch Parent Cost : ", cb.Parent.Cost, "Current Branch Parent Board", cb.Parent.Board)
+
+		//		instructions()
+		//		// 		tree.PrintTree(root)
