@@ -1,5 +1,0 @@
-package heuristics
-
-func init() {
-	
-}
