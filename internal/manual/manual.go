@@ -25,6 +25,7 @@ func Instructions() string {
 	i - Print instructions
 	p - Print current board
 	b - Print current branch
+	t - Print the entire tree
 	x - Exit game
 	`
 }
