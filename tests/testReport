@@ -1,0 +1,24 @@
+mode: set
+github.com/cmikekharris/Go8T3S/internal/game/board.go:11.28,20.29 6 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:20.29,22.22 2 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:22.22,29.4 3 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:33.2,37.33 3 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:37.33,38.28 1 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:38.28,41.4 2 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:44.2,44.14 1 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:47.32,53.2 1 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:55.37,57.2 1 1
+github.com/cmikekharris/Go8T3S/internal/game/board.go:59.23,65.2 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:7.57,14.19 5 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:15.12,16.22 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:17.14,18.22 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:19.14,20.24 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:21.15,22.24 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:26.2,26.60 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:26.60,28.3 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:31.2,35.17 4 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:38.49,41.33 2 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:41.33,42.28 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:42.28,43.29 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:43.29,45.5 1 1
+github.com/cmikekharris/Go8T3S/internal/game/movement.go:49.2,49.15 1 0
